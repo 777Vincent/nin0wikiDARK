@@ -1,0 +1,35 @@
+name: Update Userstyle
+
+on:
+  schedule:
+    - cron: '* * * * *'  # This will run the script every hour
+
+jobs:
+  update-userstyle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Fetch the latest Userstyle CSS
+        run: |
+          python script.py
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add style.css
+          git commit -m "Update Userstyle" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push
