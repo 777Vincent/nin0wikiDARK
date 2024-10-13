@@ -36,7 +36,8 @@
 	.oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button,
 	.catlinks,
 	.my-8.bg-gradient-gray,
-	.code-label{
+	.code-label,
+	.oo-ui-window-content.oo-ui-dialog-content.oo-ui-processDialog-content.oo-ui-window-content-setup.oo-ui-window-content-ready {
 		background-color: black !important;
 		background-image: none !important;
 	}
@@ -73,7 +74,8 @@
 	li,
 	text,
 	table,
-	figure {
+	figure,
+	.oo-ui-window-content.oo-ui-dialog-content.oo-ui-processDialog-content.oo-ui-window-content-setup.oo-ui-window-content-ready {
 		color: white !important;
 	}
 	#p-namespaces {
@@ -89,5 +91,14 @@
 	}
 	#mw-head {
 		outline: 1px solid white;
+	}
+	.oo-ui-iconElement-icon.oo-ui-icon-close::before {
+		content: "X";
+		color: white;
+		z-index: 9999999;
+		position: absolute;
+		left: 3px;
+		top: 9px;
+		font-size: 20px;
 	}
 }
