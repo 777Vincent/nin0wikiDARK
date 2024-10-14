@@ -41,6 +41,7 @@
 	.ve-ui-mwSaveDialog-options,
 	.ext-WikiEditor-ResizingDragBar,
 	.wikiEditor-ui-toolbar,
+	.mw-notification,
 	#mw-notification-area {
 		background-color: black !important;
 		background-image: none !important;
@@ -93,9 +94,7 @@
 		color: white;
 		/* Change all text to white */
 	}
-	#mw-head {
-		outline: 1px solid white;
-	}
+
 	.oo-ui-iconElement-icon.oo-ui-icon-close::before {
 		content: "X";
 		color: white;
