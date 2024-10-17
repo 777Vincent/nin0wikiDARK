@@ -2,8 +2,7 @@ name: Update Userstyle
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # This will run the script every minute
-
+    - cron: '*/10 * * * *' 
 jobs:
   update-userstyle:
     runs-on: ubuntu-latest
